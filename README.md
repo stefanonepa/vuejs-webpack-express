@@ -14,11 +14,14 @@
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
 ``` bash
-$ npm install -g vue-cli
-$ vue init webpack my-project
+$ npm i -g vue-cli
+$ vue init stefanonepa/vuejs-webpack-express my-project
 $ cd my-project
-$ npm install
+$ npm i
 $ npm run dev
+$ cd publish
+$ npm i
+$ npm run start
 ```
 
 ## What's Included
@@ -29,12 +32,14 @@ $ npm run dev
   - State preserving compilation error overlay
   - Lint-on-save with ESLint
   - Source maps
+  - Proxy of the minimalist express api
 
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
   - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+  - All compiled files are copied in publish/static folder who is publish by the default express api
 
 - `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
   - Supports ES2015 in test files.
